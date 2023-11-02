@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/Modules/projects_page/widgets/project_card.dart';
 
 class ProjectsPageWeb extends StatefulWidget {
   const ProjectsPageWeb({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _ProjectsPageWebState extends State<ProjectsPageWeb>
     return LayoutBuilder(
       builder: (_, constraints) {
         return Scaffold(
-            backgroundColor: Color(0xff1c1e1f),
+            backgroundColor: const Color(0xff1c1e1f),
             appBar: AppBar(
               backgroundColor: Colors.black,
               elevation: 0,
@@ -60,41 +61,49 @@ class _ProjectsPageWebState extends State<ProjectsPageWeb>
             body: SizedBox(
                 height: constraints.maxHeight,
                 width: constraints.maxWidth,
-                child: Column(
+                child: const Column(
                   children: [
-                    Card(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          const ListTile(
-                            title: Text('ChessCake'),
-                            subtitle: Text('Chess Game with candy based'),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  children: const [
-                                    CircleAvatar(
-                                      radius: 5,
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      "Flutter",
-                                      style: TextStyle(fontSize: 10),
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                    ProjectCard(
+                      title: "ChessCake",
+                      subTitle:
+                          "Um emocionante jogo de xadrez com uma adorável temática de doces criado em Unity.",
                     ),
+                    ProjectCard(
+                      title: " MtgSearcher",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " SaveFileManager",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " QuemPage",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " GcRandomizer",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " ArvoreRubroNegra",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " BackendJava",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " QuizzlerFlutter",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " Placa de transito",
+                      subTitle: "",
+                    ),
+                    ProjectCard(
+                      title: " Placa de transito",
+                      subTitle: "",
+                    )
                   ],
                 )));
       },
