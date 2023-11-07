@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/Modules/projects_page/models/project_model.dart';
 import 'package:portifolio/Modules/projects_page/widgets/project_tag.dart';
 
 class ProjectCard extends StatelessWidget {
-  final String title;
-  final String subTitle;
-  const ProjectCard({Key? key, required this.title, required this.subTitle})
-      : super(key: key);
+  final Project project;
+  const ProjectCard({
+    Key? key,
+    required this.project,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,24 +15,24 @@ class ProjectCard extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            title: Text(title),
-            subtitle: Text(subTitle),
+            title: Text(project.title),
+            subtitle: Text(project.subtitle),
           ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                ProjectTagTech(
-                  name: "C#",
-                  color: Colors.red,
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 20,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: project.technologyUsed.length,
+                  itemBuilder: (context, index) {
+                    return ProjectTagTech(
+                      name: project.technologyUsed[index].toString(),
+                      color: Colors.red,
+                    );
+                  },
                 ),
-                ProjectTagTech(
-                  name: "Unity",
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-          ),
+              )),
         ],
       ),
     );

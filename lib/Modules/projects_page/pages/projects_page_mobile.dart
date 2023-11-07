@@ -33,32 +33,32 @@ class _ProjectsPageMobileState extends State<ProjectsPageMobile> {
                       height: constraints.maxHeight * 0.2,
                       width: constraints.maxWidth * 0.4,
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           "João Victor França ",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 32,
                               fontWeight: FontWeight.bold),
                         ),
-                        const Text(
+                        Text(
                           "Desenvolvedor Flutter",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontWeight: FontWeight.w400),
                         ),
-                        const Divider(
+                        Divider(
                           height: 20,
                           thickness: .5,
                           color: Colors.grey,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             AppBaseButton(
                               height: 50,
                               width: 100,
@@ -75,12 +75,12 @@ class _ProjectsPageMobileState extends State<ProjectsPageMobile> {
                                 color: Colors.red),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 20,
                         ),
                         Wrap(
                           spacing: 30,
-                          children: const [
+                          children: [
                             IconButtonSvg(
                               asset: 'assets/icons/github.svg',
                             ),
