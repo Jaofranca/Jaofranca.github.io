@@ -1,6 +1,3 @@
-git init
-git config --global user.email joaovfranca1@gmail.com.com
-git config --global user.name João Victor de França
 flutter pub get
 flutter build web --web-renderer canvaskit
 rm -rf .dart_tool/
