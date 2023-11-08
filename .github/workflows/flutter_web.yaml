@@ -1,19 +1,38 @@
-name: Run Shell Script
+name: Flutter Web
 
 on:
   push:
     branches:
-      - master  
+      - main
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - name: Run Shell Script
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Web
+        run: flutter build web --release
+
+      - name: Deploy
         run: |
-          chmod +x deploy.sh
-          ./deploy.sh
+          cd build/web
+          git init
+          git config --global user.email joaovfranca1@gmail.com.com
+          git config --global user.name João Victor de França
+          git status
+          git remote add origin https://${{secrets.token}}@github.com/toshiossada/toshiossada.github.io.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
