@@ -3,7 +3,7 @@ name: Flutter Web
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
           git config --global user.email joaovfranca1@gmail.com.com
           git config --global user.name João Victor de França
           git status
-          git remote add origin https://${{secrets.token}}@github.com/toshiossada/toshiossada.github.io.git
+          git remote add origin https://${{secrets.token}}@github.com/Jaofranca/Jaofranca.github.io.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
