@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Shell Script
+      - name: Flutter Web
         run: |
           cd build/web
           git init
