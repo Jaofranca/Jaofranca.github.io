@@ -15,7 +15,6 @@ jobs:
 
       - name: Flutter Web
         run: |
-          cd build/web
           git init
           git config --global user.email joaovfranca1@gmail.com.com
           git config --global user.name João Victor de França
