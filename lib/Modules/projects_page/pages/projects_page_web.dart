@@ -36,6 +36,7 @@ class _ProjectsPageWebState extends State<ProjectsPageWeb>
           child: Scaffold(
               backgroundColor: const Color(0xff1c1e1f),
               appBar: AppBar(
+                  automaticallyImplyLeading: false,
                   backgroundColor: Colors.black,
                   elevation: 0,
                   title: const Text(
@@ -77,6 +78,7 @@ class _ProjectsPageWebState extends State<ProjectsPageWeb>
                                 color: Colors.white))),
                   ],
                   bottom: const TabBar(
+                    isScrollable: true,
                     tabs: [
                       Tab(
                         icon: Text("Mobile"),

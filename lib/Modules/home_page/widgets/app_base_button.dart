@@ -5,12 +5,14 @@ class AppBaseButton extends StatefulWidget {
   final double height;
   final String title;
   final Color color;
+  final Function()? onPressed;
   const AppBaseButton(
       {Key? key,
       required this.width,
       required this.height,
       required this.title,
-      required this.color})
+      required this.color,
+      required this.onPressed})
       : super(key: key);
 
   @override
@@ -29,9 +31,7 @@ class _AppBaseButtonState extends State<AppBaseButton> {
         borderRadius: BorderRadius.circular(8),
         clipBehavior: Clip.hardEdge,
         child: InkWell(
-          onTap: () {
-            print("tapped");
-          },
+          onTap: widget.onPressed,
           child: SizedBox(
             height: widget.height,
             width: widget.width,

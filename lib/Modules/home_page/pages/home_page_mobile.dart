@@ -3,6 +3,7 @@ import 'package:portifolio/Modules/home_page/widgets/app_base_button.dart';
 import 'package:portifolio/Modules/home_page/widgets/app_drawer.dart';
 import 'package:portifolio/Modules/home_page/widgets/home_page_image.dart';
 import 'package:portifolio/Modules/home_page/widgets/icon_button_svg.dart';
+import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 
 class HomePageMobile extends StatefulWidget {
   const HomePageMobile({Key? key}) : super(key: key);
@@ -33,25 +34,25 @@ class _HomePageMobileState extends State<HomePageMobile> {
                       height: constraints.maxHeight * 0.2,
                       width: constraints.maxWidth * 0.4,
                     ),
-                    const Column(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "João Victor França ",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 32,
                               fontWeight: FontWeight.bold),
                         ),
-                        Text(
+                        const Text(
                           "Desenvolvedor Flutter",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontWeight: FontWeight.w400),
                         ),
-                        Divider(
+                        const Divider(
                           height: 20,
                           thickness: .5,
                           color: Colors.grey,
@@ -64,21 +65,39 @@ class _HomePageMobileState extends State<HomePageMobile> {
                               width: 100,
                               title: "Sobre mim",
                               color: Colors.blue,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute<void>(
+                                    builder: (BuildContext context) =>
+                                        const ProjectsPage(),
+                                  ),
+                                );
+                              },
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 25,
                             ),
                             AppBaseButton(
                                 height: 50,
                                 width: 100,
                                 title: "Projetos",
-                                color: Colors.red),
+                                color: Colors.red,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute<void>(
+                                      builder: (BuildContext context) =>
+                                          const ProjectsPage(),
+                                    ),
+                                  );
+                                }),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Wrap(
+                        const Wrap(
                           spacing: 30,
                           children: [
                             IconButtonSvg(

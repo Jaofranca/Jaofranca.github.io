@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:portifolio/Modules/experiences_page/pages/experiences_page.dart';
 import 'package:portifolio/Modules/home_page/pages/home_page.dart';
 import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const ExperiencesPage(),
     );
   }
 }

@@ -59,20 +59,20 @@ class _ProjectsPageMobileState extends State<ProjectsPageMobile> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            AppBaseButton(
-                              height: 50,
-                              width: 100,
-                              title: "Sobre mim",
-                              color: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 25,
-                            ),
-                            AppBaseButton(
-                                height: 50,
-                                width: 100,
-                                title: "Projetos",
-                                color: Colors.red),
+                            // AppBaseButton(
+                            //   height: 50,
+                            //   width: 100,
+                            //   title: "Sobre mim",
+                            //   color: Colors.blue,
+                            // ),
+                            // SizedBox(
+                            //   width: 25,
+                            // ),
+                            // AppBaseButton(
+                            //     height: 50,
+                            //     width: 100,
+                            //     title: "Projetos",
+                            //     color: Colors.red),
                           ],
                         ),
                         SizedBox(

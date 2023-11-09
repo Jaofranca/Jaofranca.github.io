@@ -7,12 +7,13 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (_, constraints) {
-      if (constraints.maxWidth < 700) {
-        return const ProjectsPageMobile();
-      } else {
-        return const ProjectsPageWeb();
-      }
-    });
+    return const ProjectsPageWeb();
+    // return LayoutBuilder(builder: (_, constraints) {
+    //   if (constraints.maxWidth < 700) {
+    //     return const ProjectsPageWeb();
+    //   } else {
+    //     return const ProjectsPageWeb();
+    //   }
+    // }
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/Modules/experiences_page/pages/experiences_page.dart';
+import 'package:portifolio/Modules/home_page/pages/home_page.dart';
 import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 
 class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -9,14 +11,22 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         backgroundColor: Colors.black,
+        automaticallyImplyLeading: false,
         elevation: 0,
-        title: const Text(
-          "JaoFranca",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w200,
-            color: Colors.white,
+        title: TextButton(
+          child: const Text(
+            "@JaoFranca",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w200,
+              color: Colors.white,
+            ),
           ),
+          onPressed: () {
+            //TODO: previnir que o usuario va pra essa pagina caso ja esteja nela
+
+            Navigator.maybePop(context);
+          },
         ),
         actions: [
           TextButton(
@@ -27,7 +37,13 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
                       fontWeight: FontWeight.w200,
                       color: Colors.white))),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExperiencesPage(),
+                    ));
+              },
               child: const Text("Experiência",
                   style: TextStyle(
                       fontSize: 16,

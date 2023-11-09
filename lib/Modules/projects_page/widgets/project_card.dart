@@ -27,7 +27,9 @@ class ProjectCard extends StatelessWidget {
                   itemCount: project.technologyUsed.length,
                   itemBuilder: (context, index) {
                     return ProjectTagTech(
-                      name: project.technologyUsed[index].toString(),
+                      name: project.technologyUsed[index]
+                          .toString()
+                          .split('.')[1],
                       color: Colors.red,
                     );
                   },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/Modules/home_page/widgets/app_base_button.dart';
 import 'package:portifolio/Modules/home_page/widgets/home_page_image.dart';
 import 'package:portifolio/Modules/home_page/widgets/icon_button_svg.dart';
+import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 import 'package:portifolio/Modules/widgets/reusable_app_bar.dart';
 
 class HomePageWeb extends StatefulWidget {
@@ -33,20 +34,20 @@ class _HomePageWebState extends State<HomePageWeb>
                   const SizedBox(
                     width: 25,
                   ),
-                  const SingleChildScrollView(
+                  SingleChildScrollView(
                     child: SizedBox(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "João Victor França - Desenvolvedor Flutter",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Divider(
+                          const Divider(
                             height: 20,
                             thickness: 5,
                           ),
@@ -58,21 +59,38 @@ class _HomePageWebState extends State<HomePageWeb>
                                 width: 100,
                                 title: "Sobre mim",
                                 color: Colors.blueGrey,
+                                onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute<void>(
+                                    builder: (BuildContext context) =>
+                                        const ProjectsPage(),
+                                  ),
+                                ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 25,
                               ),
                               AppBaseButton(
-                                  height: 50,
-                                  width: 100,
-                                  title: "Projetos",
-                                  color: Colors.grey),
+                                height: 50,
+                                width: 100,
+                                title: "Projetos",
+                                color: Colors.grey,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute<void>(
+                                      builder: (BuildContext context) =>
+                                          const ProjectsPage(),
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Wrap(
+                          const Wrap(
                             spacing: 30,
                             children: [
                               IconButtonSvg(
