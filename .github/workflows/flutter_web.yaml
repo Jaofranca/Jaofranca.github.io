@@ -28,8 +28,8 @@ jobs:
         run: |
           cd build/web
           git init
-          git config --global user.email joaovfranca1@gmail.com.com
-          git config --global user.name João Victor de França
+          git config --global user.email joaovfranca1@gmail.com
+          git config --global user.name "João Victor de França"
           git status
           git remote add origin https://${{secrets.token}}@github.com/Jaofranca/Jaofranca.github.io.git
           git checkout -b gh-pages
