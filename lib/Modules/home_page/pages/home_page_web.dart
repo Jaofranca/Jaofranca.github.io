@@ -19,7 +19,7 @@ class _HomePageWebState extends State<HomePageWeb>
     return LayoutBuilder(
       builder: (_, constraints) {
         return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: const Color(0xff1c1e1f),
             appBar: const ReusableAppBar(),
             body: SizedBox(
               height: constraints.maxHeight,

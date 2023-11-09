@@ -12,13 +12,12 @@ class HomePageMobile extends StatefulWidget {
   State<HomePageMobile> createState() => _HomePageMobileState();
 }
 
-//TODO: esticar a imagem
 class _HomePageMobileState extends State<HomePageMobile> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (_, constraints) {
       return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color(0xff1c1e1f),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
         ),
@@ -84,7 +83,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
                                 title: "Projetos",
                                 color: Colors.red,
                                 onPressed: () {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute<void>(
                                       builder: (BuildContext context) =>

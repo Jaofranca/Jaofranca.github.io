@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/Modules/experiences_page/pages/experiences_page.dart';
+import 'package:portifolio/Modules/home_page/pages/home_page.dart';
 import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 
 class AppDrawer extends StatefulWidget {
@@ -18,6 +20,21 @@ class _AppDrawerState extends State<AppDrawer> {
         children: [
           ListTile(
             title: const Text(
+              '@JaoFranca',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => const HomePage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text(
               'Sobre mim',
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -31,7 +48,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute<void>(
                   builder: (BuildContext context) => const ProjectsPage(),
@@ -45,7 +62,14 @@ class _AppDrawerState extends State<AppDrawer> {
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => const ExperiencesPage(),
+                ),
+              );
+            },
           ),
           ListTile(
             title: const Text(

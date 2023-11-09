@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio/Modules/experiences_page/pages/experiences_page.dart';
-import 'package:portifolio/Modules/home_page/pages/home_page.dart';
 import 'package:portifolio/Modules/projects_page/pages/projects_page.dart';
 
 class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -10,7 +9,7 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         elevation: 0,
         title: TextButton(
@@ -23,8 +22,6 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           onPressed: () {
-            //TODO: previnir que o usuario va pra essa pagina caso ja esteja nela
-
             Navigator.maybePop(context);
           },
         ),

@@ -7,13 +7,12 @@ class ExperiencesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ExperiencesPageWeb();
-    // return LayoutBuilder(builder: (_, constraints) {
-    //   if (constraints.maxWidth < 700) {
-    //     return const ExperiencesPageMobile();
-    //   } else {
-    //     return const ExperiencesPageWeb();
-    //   }
-    // });
+    return LayoutBuilder(builder: (_, constraints) {
+      if (constraints.maxWidth < 700) {
+        return const ExperiencesPageMobile();
+      } else {
+        return const ExperiencesPageWeb();
+      }
+    });
   }
 }

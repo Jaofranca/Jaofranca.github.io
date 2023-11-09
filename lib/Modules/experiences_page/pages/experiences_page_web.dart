@@ -10,14 +10,12 @@ class ExperiencesPageWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (_, constraints) {
       return Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: const Color(0xff1c1e1f),
           appBar: const ReusableAppBar(),
           body: Center(
             child: SizedBox(
                 // height: constraints.maxHeight,
-                width: constraints.maxWidth < 700
-                    ? constraints.maxWidth * 0.7
-                    : constraints.maxWidth * 0.4,
+                width: constraints.maxWidth * 0.6,
                 child: ListView.builder(
                     itemCount: experiences.length,
                     itemBuilder: (_, index) {
